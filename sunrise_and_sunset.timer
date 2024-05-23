@@ -1,0 +1,11 @@
+[Unit]
+Description=Sunrise and Sunset
+
+[Timer]
+OnCalendar=*-*-* 06:00:00
+OnCalendar=*-*-* 18:00:00
+Persistent=true
+Unit=toggle_theme.service
+
+[Install]
+WantedBy=timers.target

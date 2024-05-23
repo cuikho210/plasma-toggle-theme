@@ -1,0 +1,5 @@
+[Unit]
+Description=Toggle theme
+
+[Service]
+ExecStart=/home/cuikho210/Documents/scripts/toggle-theme/toggle_theme.bash
