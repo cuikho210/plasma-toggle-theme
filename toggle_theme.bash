@@ -14,8 +14,7 @@ day_end_at="18"
 current_time=$(date +"%H")
 is_day=false
 
-if [ "$current_time" -gt "$day_start_at" ] && [ "$current_time" -lt "$day_end_at" ]
-then
+if (( current_time >= day_start_at && current_time < day_end_at )); then
 	is_day=true
 fi
 
