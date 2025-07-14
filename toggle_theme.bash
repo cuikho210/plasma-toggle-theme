@@ -9,10 +9,13 @@ pattern_light="ColorScheme=$theme_light"
 pattern_dark="ColorScheme=$theme_dark"
 is_dark_mode=$(echo "$kdeglobals" | grep "$pattern_dark")
 
-day_start_at="6"
-day_end_at="18"
+day_start_at=6
+day_end_at=18
 current_time=$(date +"%H")
+current_time=$((10#$current_time))
 is_day=false
+
+echo "Current time: $current_time"
 
 if (( current_time >= day_start_at && current_time < day_end_at )); then
 	is_day=true
