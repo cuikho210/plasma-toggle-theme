@@ -1,5 +1,13 @@
 [Unit]
-Description=Toggle theme
+Description=Toggle light/dark theme based on time
+BindsTo=graphical-session.target
+After=graphical-session.target
 
 [Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 3
+ExecStartPre=/usr/bin/dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY WAYLAND_DISPLAY
 ExecStart=/home/cuikho210/Documents/scripts/toggle-theme/toggle_theme.bash
+
+[Install]
+WantedBy=graphical-session.target
