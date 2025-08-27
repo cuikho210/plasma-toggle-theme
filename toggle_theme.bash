@@ -28,6 +28,7 @@ function to_light() {
 	bash "$working_dir/set_nvim_theme.bash" light
 	bash "$working_dir/set_alacritty_theme.bash" light
 	bash "$working_dir/set_gemini_theme.bash" light
+	bash "$working_dir/set_qwen_code_theme.bash" light
 }
 
 function to_dark() {
@@ -37,6 +38,7 @@ function to_dark() {
 	bash "$working_dir/set_nvim_theme.bash" dark
 	bash "$working_dir/set_alacritty_theme.bash" dark
 	bash "$working_dir/set_gemini_theme.bash" dark
+	bash "$working_dir/set_qwen_code_theme.bash" dark
 }
 
 function toggle_theme() {
